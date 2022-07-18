@@ -1,12 +1,12 @@
-python -m venv  venv               #Создание виртуального окружения
-venv\Scripts\activate              #Активровать виртуальное окружение
-pip install django                 #Установка нужной библиотеки
-django-admin startproject config . #Создание сайта
-python manage.py runserver         #Запуск сайта
-git init                           #Создание Точки сохранения (Точка сохранения - сохранение проекта)
-git add .                          #Выбрать все файлы
-git reset .                        #Сбросить все файлы
-git commit -m "Сохранить"          #Команда Сохранить (в кавычках пишется какое-либо пояснение)
+python -m venv  venv                #Создание виртуального окружения
+venv\Scripts\activate               #Активровать виртуальное окружение
+pip install django                  #Установка нужной библиотеки
+django-admin startproject config .  #Создание сайта
+python manage.py runserver          #Запуск сайта
+git init                            #Создание Точки сохранения (Точка сохранения - сохранение проекта)
+git add .                           #Выбрать все файлы
+git reset .                         #Сбросить все файлы
+git commit -m "Сохранить"           #Команда Сохранить (в кавычках пишется какое-либо пояснение)
 
 
 
