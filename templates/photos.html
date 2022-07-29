@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фотографии {{ secret }}</title>
+</head>
+<body>
+{% if locations %}
+    <h2>Сборник мест</h2>
+    <ul>
+    {% for location in locations %}
+        <li>{{ location }}</li>
+    {% endfor %}
+{% endif %}
+</ul>
+</body>
+</html>
