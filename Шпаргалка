@@ -37,3 +37,4 @@ pip freeze > requirements.txt # создать файл с названием б
 3. Создать urls.py и подключить его
 4. создать функцию practice и шаблон practice.html
 5. Сделать так, чтобы функция передавала в шаблон что-нибудь (цифру, слово, букву)
+6. https://www.youtube.com/watch?v=iPV5GKeHyV4
