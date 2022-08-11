@@ -1,4 +1,5 @@
 <!doctype html> <!-- мы хотим использовать последнюю версию html -->
+{% load static %}
 <html lang="en"> <!-- наша страница -->
 <head> <!-- настройка сайта -->
     <meta charset="UTF-8"> <!-- поддержка русских символов -->
@@ -6,20 +7,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- поддержка мобильных устройств -->
     <title>Блок Егор Путешественника</title> <!-- названия сайта -->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico'%}">
+
 </head>
 <body> <!-- содержимое сайта -->
-<div>
-    <a href="/photo/">Фотографии</a>
-    <a href="/secondpage/">Вторая страница</a>
+<div class="navigation">
+    <a href="/"><img class="navigation-logo" src="{% static 'img/logo.png' %}" alt=""></a>
+    <a class="navigation-link" href="/photo/">Фотографии</a>
+    <a class="navigation-link" href="/secondpage/">Вторая страница</a>
 </div>
-<h1>Личный блог Егора Путешественника</h1> <!-- заголовок -->
-<p>
-    Привет всем, меня зовут Егор, мне 17 лет. <br>
-    Я люблю ездить на велосипеде и делать красивые фотографии. <br>
-    На этом сайте, вы сможете смотреть фотографии <br>
-    и писать свои комментарии
-</p> <!-- текст -->
-<img width="500" src="https://oir.mobi/uploads/posts/2021-06/1623937307_5-oir_mobi-p-krasivii-rassvet-v-derevne-priroda-krasivo-5.jpg">
+<div class="banner">
+    <h1>Личный блог <br>Егора Путешественника</h1> <!-- заголовок -->
+</div>
+<div class="aboutme">
+    <div class="aboutme-p">
+        <h2>Немного обо мне</h2>
+        <p>
+            Привет всем, меня зовут Егор, мне 17 лет.
+            Я люблю ездить на велосипеде и делать красивые фотографии.
+            На этом сайте, вы сможете смотреть фотографии
+            и писать свои комментарии
+        </p>
+    </div> <!-- текст -->
+    <img class="aboutme-img" width="500" src="{% static 'img/egor.jpeg' %}">
+</div>
 <br>
 </body>
 </html>

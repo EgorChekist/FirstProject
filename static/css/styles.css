@@ -1,0 +1,52 @@
+body {
+    color: #0A090C;
+    background: #F0EDEE;
+    padding: 0; /* внутренний отступ */
+    margin: 0; /* внешний отступ */
+}
+
+.navigation {
+    background: #07393E;
+    padding: 10px;
+}
+
+.navigation-link {
+    color: #F0EDEE;
+    text-decoration: none; /* убрать нижнее подчеркивание */
+    margin-left: 20px;
+}
+
+.banner {
+    height: 200px;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #80d7af;
+}
+
+.navigation-logo {
+    width: 23px;
+    line-height: 50px;
+    vertical-align: bottom;
+}
+
+.aboutme {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.aboutme-p {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 30%;
+    margin-right: 30px;
+}
+
+.aboutme-img {
+    display: inline-block;
+    width: 40%;
+}
+
+.aboutme-img img {
+    width: 100%;
+}
