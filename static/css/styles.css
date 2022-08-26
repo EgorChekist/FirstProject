@@ -23,6 +23,18 @@ body {
     background-color: #80d7af;
 }
 
+.titles {
+    text-align: center;
+}
+
+.images_gallery {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+
+
+}
+
 .navigation-logo {
     width: 23px;
     line-height: 50px;

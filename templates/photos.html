@@ -1,15 +1,26 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Фотографии</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
 </head>
 <body>
+<div class="navigation">
+    <a href="/"><img class="navigation-logo" src="{% static 'img/logo.png' %}" alt=""></a>
+    <a class="navigation-link" href="/">Первая страница</a>
+    <a class="navigation-link" href="/secondpage/">Вторая страница</a>
+</div>
 {% if photos %}
-    <h2>Сборник мест</h2>
+     <div class="titles">
+        <h2>Сборник мест</h2>
+    </div>
     {% for photo in photos %}
-        <p>{{ photo.place }}</p>
-<img src="{{photo.picture.url}}" alt="">
+        <div class="images_gallery">
+            <p>{{ photo.place }}</p>
+            <img width="300" height="300" src={{photo.picture.url}} alt="">
+        </div>
     {% endfor %}
 {% endif %}
 </body>
