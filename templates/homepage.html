@@ -31,6 +31,23 @@
     </div> <!-- текст -->
     <img class="aboutme-img" width="500" src="{% static 'img/egor.jpeg' %}">
 </div>
-<br>
+<div class="contact_me">
+    <h2 class="contact_me-h2">Напишите мне</h2>
+    <form action="/photo/contact_form/">
+        <div>
+            <label>Как вас зовут:</label><br>
+            <input type="text" class="form-input" placeholder="Егор" name="name">
+        </div>
+        <div>
+            <label>Ваша почта:</label><br>
+            <input type="email" class="form-input" placeholder="egor@mail.ru" name="email" required>
+        </div>
+        <div>
+            <label>Ваша обращение:</label><br>
+            <textarea name="message" rows="10" class="form-input" placeholder="..."></textarea>
+        </div>
+        <button type="submit" class="form-button">Отправить</button>
+    </form>
+</div>
 </body>
 </html>

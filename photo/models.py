@@ -12,3 +12,10 @@ class Photo(models.Model):
         return f"Фотография{self.number}"
 
 
+class Contact(models.Model):
+    name = models.CharField("Имя", max_length=128)
+    email = models.EmailField("Почта")
+    message = models.CharField("Текст", max_length=1028)
+
+    def __str__(self):
+        return f"Контакт {self.name}"

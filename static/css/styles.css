@@ -62,3 +62,37 @@ body {
 .aboutme-img img {
     width: 100%;
 }
+
+.contact_me {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.contact_me-h2 {
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #5897fb;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.form-button:hover {
+    background-color: #4d88e6;
+}
