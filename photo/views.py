@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Photo
+from .models import Photo, Contact
 import random
 
 # Create your views here.
@@ -16,5 +16,8 @@ def contact_form(request):
     name = request.GET.get("name")
     email = request.GET.get("email")
     message = request.GET.get("message")
-    print(name, email, message)
+
+    # Contact.objects.create(name=name, email=email, message=message)
+    Contact(name=name, email=email, message=message).save()
+
     return redirect("/")

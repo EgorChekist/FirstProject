@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Войти в аккаунт</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico'%}">
+</head>
+<body>
+<form action="/auth/login/handle/" method="post">
+    {% csrf_token %}
+    <h1>Войти в аккаунт</h1>
+    <div>
+        <label>Ваш никнейм</label><br>
+        <input type="text" name="username" class="form-input">
+    </div>
+    <div>
+        <label>Ваш пароль</label><br>
+        <input type="password" name="password" class="form-input">
+    </div>
+    <button type="submit" class="form-button">Отправить</button>
+</form>
+</body>
+</html>

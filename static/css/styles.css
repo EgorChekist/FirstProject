@@ -96,3 +96,7 @@ body {
 .form-button:hover {
     background-color: #4d88e6;
 }
+
+.auth {
+    float: right;
+}

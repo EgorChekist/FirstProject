@@ -24,6 +24,7 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="homepage.html")),
     path("secondpage/", TemplateView.as_view(template_name="secondpage.html")),
     path("photo/", include("photo.urls")),
+    path("auth/", include("authorization.urls")),
 ]
 
 
