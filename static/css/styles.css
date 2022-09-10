@@ -100,3 +100,8 @@ body {
 .auth {
     float: right;
 }
+.error_text {
+    text-align: center;
+    color: #ff4646;
+    font-size: 12px;
+}

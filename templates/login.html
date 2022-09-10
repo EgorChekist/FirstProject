@@ -19,6 +19,11 @@
         <label>Ваш пароль</label><br>
         <input type="password" name="password" class="form-input">
     </div>
+    {% if error %}
+    <div class="error_text">
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
     <button type="submit" class="form-button">Отправить</button>
 </form>
 </body>
