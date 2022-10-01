@@ -1,17 +1,10 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title%}Фотографии Путешествий{% endblock %}
+
+
+{% block body %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Фотографии</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
-</head>
-<body>
-<div class="navigation">
-    <a href="/"><img class="navigation-logo" src="{% static 'img/logo.png' %}" alt=""></a>
-    <a class="navigation-link" href="/">Первая страница</a>
-    <a class="navigation-link" href="/secondpage/">Вторая страница</a>
-</div>
 {% if photos %}
      <div class="titles">
         <h2>Сборник мест</h2>
@@ -23,5 +16,4 @@
         </div>
     {% endfor %}
 {% endif %}
-</body>
-</html>
+{% endblock %}

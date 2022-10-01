@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 # Create your views here.
 
-def login(request):
+def login_view(request):
+    if request.user.is_authenticated:
+        return redirect("/")
     return render(request, "login.html")
 
 def login_handle(request):
@@ -10,9 +13,10 @@ def login_handle(request):
     username = request.POST.get("username", "")
     password = request.POST.get("password", "")
 
-    user = User.objects.filter(username=username)
-    if user.exists():
-        print("Пользователь найден")
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return redirect("/")
     else:
         data["error"] = "Пользователь не найден"
         return render(request, "login.html", data)

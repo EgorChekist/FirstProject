@@ -1,24 +1,7 @@
-<!doctype html> <!-- мы хотим использовать последнюю версию html -->
+{% extends "base.html" %}
+
+{% block body %}
 {% load static %}
-<html lang="en"> <!-- наша страница -->
-<head> <!-- настройка сайта -->
-    <meta charset="UTF-8"> <!-- поддержка русских символов -->
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- поддержка мобильных устройств -->
-    <title>Блок Егор Путешественника</title> <!-- названия сайта -->
-    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico'%}">
-</head>
-<body> <!-- содержимое сайта -->
-<div class="navigation">
-    <a href="/"><img class="navigation-logo" src="{% static 'img/logo.png' %}" alt=""></a>
-    <a class="navigation-link" href="/photo/">Фотографии</a>
-    <a class="navigation-link" href="/secondpage/">Вторая страница</a>
-    <div class="auth">
-        <a class="navigation-link" href="auth/login/">Войти</a>
-    </div>
-</div>
 <div class="banner">
     <h1>Личный блог <br>Егора Путешественника</h1> <!-- заголовок -->
 </div>
@@ -52,5 +35,4 @@
         <button type="submit" class="form-button">Отправить</button>
     </form>
 </div>
-</body>
-</html>
+{% endblock %}

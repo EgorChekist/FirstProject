@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- мы хотим использовать последнюю версию html -->
+{% load static %}
+<html lang="en"> <!-- наша страница -->
+<head> <!-- настройка сайта -->
+    <meta charset="UTF-8"> <!-- поддержка русских символов -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- поддержка мобильных устройств -->
+    <title>{% block title%}Блог Егора Путешественника{%endblock%}</title> <!-- названия сайта -->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico'%}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body> <!-- содержимое сайта -->
+<div class="navigation">
+    <a href="/"><img class="navigation-logo" src="{% static 'img/logo.png' %}" alt=""></a>
+    <a class="navigation-link" href="/photo/">Фотографии</a>
+    <a class="navigation-link" href="/secondpage/">Вторая страница</a>
+
+    <div class="auth">
+        {% if not user.is_authenticated %}
+        <a class="navigation-link" href="/auth/login/">Войти</a>
+        {% else %}
+        <a class="navigation-link" href="/auth/logout/">Выйти</a>
+        {% endif %}
+    </div>
+</div>
+
+{% block body %}
+{% endblock %}
+</body>
+</html>
